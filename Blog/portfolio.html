@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>William Graham - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .portfolio-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding-top: 15px;
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .dropdown-drawer {
+      display: none;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 2px dashed var(--color-teal);
+      font-size: 0.9rem;
+    }
+    .dropdown-drawer.open {
+      display: block;
+    }
+    .skill-badge {
+      display: inline-block;
+      background: var(--color-seafoam);
+      padding: 4px 8px;
+      margin: 3px;
+      border-radius: 3px;
+      font-size: 0.85rem;
+      border: 1px solid var(--color-deep-ocean);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-wrapper">
+    <header>
+      <nav class="top-nav">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
+        <a href="blog.html">Blog</a>
+        <a href="links.html">Links</a>
+      </nav>
+    </header>
+
+    <main class="portfolio-stack">
+      
+      <!-- Skills Box -->
+     <!-- <section class="pixel-box">
+        <h3 style="margin-top:0;">Technical & Soft Skills</h3>
+        <div>
+          <span class="skill-badge">Tableau</span>
+          <span class="skill-badge">SIMIO</span>
+          <span class="skill-badge">SAP</span>
+          <span class="skill-badge">VBA</span>
+          <span class="skill-badge">SolidWorks</span>
+          <span class="skill-badge">C / Python</span>
+          <span class="skill-badge">Elementary Spanish</span>
+        </div>
+      </section> -->
+
+      <!-- Section Header 1-->
+      <div class="pixel-box">
+        <h2 style="color: var(--color-terracotta); margin-bottom: -3px; margin-top: -5px;">Projects!</h2>
+      </div>
+
+      <!-- Project 1 Box -->
+      <div class="pixel-box">
+        <div class="card-header">
+          <div>
+            <h3 style="margin-top: -2px; margin-bottom: -2px;">Undergraduate Research - Urban Digital Twin - UCF</h3>
+          </div>
+          <button class="pixel-btn" onclick="toggleDrawer('proj4')">More Information ▼</button>
+        </div>
+        <div id="proj4" class="dropdown-drawer">
+            <p>I am currently exploring GNN (Graph Neural Networks) in the Urban Ditigal Twin Laboratory at UCF, I am currently helping iterpolate data between the 11 CO2 sensors we have on campus. I am still in the beginnings of this project, so expect a blog post about it soon!</p>
+        </div>
+      </div>
+
+      <!-- Project 2 Box -->
+      <div class="pixel-box">
+        <div class="card-header">
+          <div>
+            <h3 style="margin-top: -2px; margin-bottom: -2px;">South African Solar Panels - UCF</h3>
+          </div>
+          <button class="pixel-btn" onclick="toggleDrawer('proj3')">More Information ▼</button>
+        </div>
+        <div id="proj3" class="dropdown-drawer">
+          <p>I co-lead a project in the Intabazwe township in South Africa with a cohort of 9 fellow students and two professors from UCF, we were able to design and install an outdoor lighting system featuring over 20 solar-powered lights to keep the nearby Callahan family school for children and orphanage well-lit throughout the night and do so on-budget and ahead of schedule!</p>
+        </div>
+      </div>
+
+      <!-- Project 3 Box -->
+      <div class="pixel-box">
+        <div class="card-header">
+          <div>
+            <h3 style="margin-top: -2px; margin-bottom: -2px;">Cooldown Data - Lockheed Martin</h3>
+          </div>
+          <button class="pixel-btn" onclick="toggleDrawer('proj2')">More Information ▼</button>
+        </div>
+        <div id="proj2" class="dropdown-drawer">
+          <p>While working for Lockheed Martin as a CWEP, I was able to collaborate with the test engineering and electro-optics teams to iterate through cooldown failure data for a particular sub-assembly to work towards root cause and corrective action. I constructed interactive Tableau visualizations to present the findings to senior leadership and improve issue visibility by 30% over the course of 2 months.</p>
+        </div>
+      </div>
+
+      <!-- Project 4 Box -->
+      <div class="pixel-box">
+        <div class="card-header">
+          <div>
+            <h3 style="margin-top: -2px; margin-bottom: -2px;">Facilities Organization - Lockheed Martin</h3>
+          </div>
+          <button class="pixel-btn" onclick="toggleDrawer('proj1')">More Information ▼</button>
+        </div>
+        <div id="proj1" class="dropdown-drawer">
+          <p>Also while working as a CWEP, I redesigned my program's facilities seating system, integrating Tableau data extracts with a custom model for visualizing over 300 seating allocations. I work closely with individual teams to ensure that all party's expectations and desire where being met. The new model boosted operational efficiency by 150% compared to the old system over the course of 3 months.</p>
+        </div>
+      </div>
+
+      <!-- Section Header 2-->
+        <div class="pixel-box">
+          <h2 style="color: var(--color-terracotta); margin-bottom: -3px; margin-top: -5px;">Leadership Experience</h2>
+        </div>
+
+      <!-- Leadership 1 Box -->
+      <div class="pixel-box">
+        <div class="card-header">
+          <div>
+            <h3 style="margin-top: -2px; margin-bottom: -2px;">UCF Ginsburg Fellow - Phoenix Generation</h3>
+          </div>
+          <button class="pixel-btn" onclick="toggleDrawer('lead2')">More Information ▼</button>
+        </div>
+        <div id="lead2" class="dropdown-drawer">
+            <p>Currently serving as Fellow for the non-partisan, non-profit organization Phoenix Generation, focusing on community outreach, facilitating dialogue across differences, and making Central Florida the most welcoming community in the US by having conversation with people we wouldn't normally converse with about topics we wouldn't normally converse about!</p>
+        </div>
+      </div>
+
+      <!-- Leadership 2 Box -->
+      <div class="pixel-box">
+        <div class="card-header">
+          <div>
+            <h3 style="margin-top: -2px; margin-bottom: -2px;">Dean's Leadership Council - UCF CECS</h3>
+          </div>
+          <button class="pixel-btn" onclick="toggleDrawer('lead1')">More Information ▼</button>
+        </div>
+        <div id="lead1" class="dropdown-drawer">
+            <p>The College of Engineering and Computer Science Dean's Leadership Council was founded in 2026 to represent the office of the Dean at all major events hosted by the college and to connect the student body within the college directly to the Dean. I have had the fortune of being able to serve as member on this council and represent the office of the Dean both at formal and also informally when assessing the needs to UCF engineering clubs and students.</p>
+        </div>
+      </div>
+
+      <!-- Section Header 2-->
+        <div class="pixel-box">
+          <h2 style="color: var(--color-terracotta); margin-bottom: -3px; margin-top: -5px;">Professional Experience</h2>
+        </div>
+
+      <!-- Job 1 Box -->
+      <div class="pixel-box">
+        <div class="card-header">
+          <div>
+            <h3 style="margin-top: -2px; margin-bottom: -2px;">Project Management CWEP - Lockheed Martin</h3>
+          </div>
+          <button class="pixel-btn" onclick="toggleDrawer('exp2')">More Information ▼</button>
+        </div>
+        <div id="exp2" class="dropdown-drawer">
+          <p> I worked as a project management CWEP at Lockheed Martin between July 2025 and August 2026, I was responsible for helping facilitate operations for my program, I collaborated with the industrial engineering team to help construct a SIMIO model for the program. I conducted facilities audits, faciliated meetings for senior managers, tracked shipments and expedited hot lots, and designed and implmented interactive Tableau Dashboards to visualize operational data. </p>
+        </div>
+      </div>
+
+      <!-- Job 2 Box -->
+      <div class="pixel-box">
+        <div class="card-header">
+          <div>
+            <h3 style="margin-top: -2px; margin-bottom: -2px;">Summer Youth Program Lead - American Red Cross</h3>
+          </div>
+          <button class="pixel-btn" onclick="toggleDrawer('exp1')">More Information ▼</button>
+        </div>
+        <div id="exp1" class="dropdown-drawer">
+          <p> Back in 2023, the summer after I graduated high-school, I had the opporunity to serve as the Summer Youth Program Lead for the UK Chapter of the American Red Cross (my family was stationed overseas). I was able to plan and allocate over 400 volunteer hours to 15 local youth volunteers and 8 local military organizations. I helped to resolve any confusion and conflicts that arose between the two parties and overall ensured that everyone had a fun summer! </p>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script>
+    function toggleDrawer(drawerId) {
+      document.getElementById(drawerId).classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

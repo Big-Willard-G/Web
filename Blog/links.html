@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>William Graham - Links</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .links-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 24px; /* Increased visible space between boxes */
+      padding-top: 20px;
+    }
+    .link-card {
+      text-align: center;
+      text-decoration: none;
+      color: var(--color-deep-ocean);
+      font-weight: bold;
+      font-size: 1.1rem;
+      display: block;
+      transition: transform 0.15s ease, background-color 0.15s ease;
+    }
+    .link-card:hover {
+      background-color: var(--color-sand);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-wrapper">
+    <header>
+      <nav class="top-nav">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="blog.html">Blog</a>
+        <a href="links.html" class="active">Links</a>
+      </nav>
+    </header>
+
+    <main class="links-stack">
+      <a href="https://www.linkedin.com/in/williamgraham124/" target="_blank" class="pixel-box link-card">
+        LinkedIn Profile ↗
+      </a>
+
+      <a href="mailto:william.graham@ucf.edu" class="pixel-box link-card">
+        Email Contact (william.graham@ucf.edu) ↗
+      </a>
+
+      <a href="https://github.com/Big-Willard-G" target="_blank" class="pixel-box link-card">
+        GitHub Profile ↗
+      </a>
+
+      <a href="https://www.youtube.com/watch?v=Aq5WXmQQooo" target="_blank" class="pixel-box link-card">
+        Resume ↗
+      </a>
+
+    </main>
+  </div>
+
+</body>
+</html>

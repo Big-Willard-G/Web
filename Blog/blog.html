@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>William Graham - Blog</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .blog-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding-top: 15px;
+    }
+    .post-content {
+      display: none;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 2px dashed var(--color-teal);
+      line-height: 1.6;
+    }
+    .post-content.open {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-wrapper">
+    <header>
+      <nav class="top-nav">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="links.html">Links</a>
+      </nav>
+    </header>
+
+    <main class="blog-stack">
+      
+      <!-- Post 1 -->
+      <article class="pixel-box">
+        <h3 style="margin-top: 0;">Building a Website!</h3>
+        <small style="color: var(--color-teal);">Posted on October 10th, 2026</small>
+        <p>Hello World!</p>
+        <button class="pixel-btn" onclick="togglePost('post1')">Read More ▼</button>
+        
+        <div id="post1" class="post-content">
+          <p>Hello! I know I have tried creating a blog before and it didn't work, but this time feels quite different, in the fact that I actually got to make some of this myself! I did use vibe coding to generate most of the HTML and VSS code, but all the pixel art I did for myself!</p>
+          <p>Most people who know me personally know that I really don't like using social media, I hope to eventually substitute social media with this website, I will post life updates and creative pursuits on here as well as the infrequent professional pursuit. I am also implementing a "Song of the Day" feature on this website, and I will update it (ideally) daily with a song I have enjoyed and bought (how else am I going to get the MP3 lol).</p>
+          <p>I will do my best to create a new blog post every month, with ideally a different focus every month. I am excited to improve this website and do my best to communicate better!</p>
+        </div>
+      </article>
+
+    </main>
+  </div>
+
+  <script>
+    function togglePost(postId) {
+      document.getElementById(postId).classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
