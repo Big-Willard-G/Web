@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://iframe.chat/scripts/main.min.js"></script>
+  <meta charset="UTF-8">
+  <title>William Graham - Home</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Home Container & Grid Layout */
+    main.home-container {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr 1.2fr;
+      /* Rows: Title, Top Subsections, Bottom Subsections */
+      grid-template-rows: auto 1fr 0.8fr;
+      grid-template-areas:
+        "header  header  profile"
+        "nav     chat    profile"
+        "nav     chat    music";
+      gap: 20px; /* Space between all rectangles */
+      padding: 15px 0;
+      height: calc(100vh - 90px); /* Extends grid to bottom of screen */
+      box-sizing: border-box;
+    }
+
+    .area-header { grid-area: header; text-align: center; }
+    .area-nav { grid-area: nav; }
+    .area-chat { grid-area: chat; display: flex; flex-direction: column; }
+    .area-profile { grid-area: profile; }
+    .area-music { grid-area: music; }
+
+    .chat-window {
+      flex: 1;
+      background: #ffffff;
+      border: 2px dashed var(--color-teal);
+      padding: 8px;
+      overflow-y: auto;
+      font-size: 0.85rem;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-wrapper" style="height: 100vh; overflow: hidden;">
+    <header>
+      <nav class="top-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="blog.html">Blog</a>
+        <a href="links.html">Links</a>
+      </nav>
+    </header>
+
+    <!-- MAIN GRID CONTAINER -->
+    <main class="home-container">
+      
+      <!-- Title Box (Only spans across Nav and Chat columns) -->
+      <section class="pixel-box area-header">
+        <h2 style="margin: 0; color: var(--color-deep-ocean);">WILLIAM GRAHAM</h2>
+        <small>UCF Accelerated BS to MS IE Student| Mathmatics and CS Minor | UCF Class of 2028</small>
+      </section>
+
+      <!-- Navigation Box -->
+      <section class="pixel-box area-nav">
+        <h3 style="margin-top:0;">Site Map</h3>
+        <ul style="padding-left: 18px; line-height: 1.8;">
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="links.html">Links</a></li>
+        </ul>
+      </section>
+
+      <!-- Chatbox Box -->
+      <section class="pixel-box area-chat">
+        <h3 style="margin-top:0;">Community Chat</h3>
+        <div class="chat-window">
+          <p><em>[System]: Chat backend offline...</em></p>
+        </div>
+      </section>
+
+      <!-- About Me Box (Extended to top height of Title Box) -->
+      <section class="pixel-box area-profile">
+        <h3 style="margin-top:0;">About Me</h3>
+        <p style="font-size: 0.85rem; line-height: 1.5;">
+          Hello! My name is William, I am a third year industrial engineering student at UCF, I made this website to showcase my projects, share my experiences, and overall just have fun!</p>
+      </section>
+
+      <!-- Song of the Day Box -->
+      <section class="pixel-box area-music">
+        <h3 style="margin-top:0;">Song of the Day:</h3>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="Can_We_Hang_Out_Sometime__Good_Kid_cover.jpeg"style="width: 80px; height: 80px; background: var(--color-seafoam); border: 2px solid var(--color-deep-ocean); flex-shrink: 0;">
+          <div>
+            <Audio id="myAudio">
+              <source src="03 Coffee.mp3">
+            </Audio>
+            <button id="audioBtn" class="mini-btn">▶</button>
+            <style>
+            .mini-btn {
+              padding: 4px 8px;
+              font-size: 12px;
+              cursor: pointer;
+            }
+            </style>
+            <strong style="font-size: 0.85rem;">Coffee</strong><br>
+            <small>Good Kid</small>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script>
+    const audio = document.getElementById('myAudio');
+    const btn = document.getElementById('audioBtn');
+
+    btn.addEventListener('click', function() {
+    if (audio.paused) {
+      audio.play();
+      btn.textContent = '⏸';
+    } else {
+      audio.pause();
+      btn.textContent = '▶';
+    }
+    });
+    </script>
+
+  <script>
+  chattable.initialize({
+    stylesheet: "chattable.css",
+  });
+  </script>
+
+</body>
+</html>
